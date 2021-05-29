@@ -38,3 +38,5 @@ else :
 #    print( '{0}' + 'S' + '{1}'+ 'B'.format(filename_strike, filename_ball))
 
 # 수정요망
+# 반복문으로 묶을 수 있을지 포멧팅이용
+# 함수로 묶을 수 있을지.
