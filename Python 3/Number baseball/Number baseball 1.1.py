@@ -24,3 +24,6 @@ else :
     print('%sS %sB' % (filename_strike, filename_ball))
     print( f'{filename_strike}S {filename_ball}B')
     print( '{0}S {1}B'.format(filename_strike, filename_ball))
+
+
+#중복 숫자 관련 체크
