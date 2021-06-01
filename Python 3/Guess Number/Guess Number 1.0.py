@@ -1,11 +1,10 @@
 # 21.05.31 ver 1.0
 
 
-# #1. 기능 1 : 시작번호와 마지막번호를 입력한다.
-# • 기능 2 : 카드번호를 랜덤으로 추출한다.
-# • 기능 3 : 랜덤으로 추출된 카드번호는
-# 시작번호와 마지막 번호 사이의 숫자이어야 한다.
-# • 기능 4 : 카드번호를 맞힐 때까지 반복해서 숫자를 입력한다.
+# 기능 1 : 시작번호와 마지막번호를 입력한다.
+# 기능 2 : 카드번호를 랜덤으로 추출한다.
+# 기능 3 : 랜덤으로 추출된 카드번호는 시작번호와 마지막 번호 사이의 숫자이어야 한다.
+# 기능 4 : 카드번호를 맞힐 때까지 반복해서 숫자를 입력한다.
 
 
 
@@ -28,6 +27,12 @@ print(filename_hidden)   # 체크용
 while True : 
     filename_userinput = input( '정답 값을 예측하세요' )
     filename_userinput = int( filename_userinput )
-    if filename_userinput == filename_hidden :                  # 정답값과 입력값이 같으면 스톱 
+    if filename_userinput == filename_hidden :                    # 정답값과 입력값이 같으면 스톱 
         print('정답')
         break
+    else :                                                        # 정답과 다른 수를 입력했다면
+        if filename_userinput > filename_hidden :                 # 입력값이 정답값보다 크다면
+            print (' 정답값보다 큽니다. 더 작은 수를 입력하세요 ')  
+        else : 
+            print (' 정답값보다 작습니다. 더 큰 수를 입력하세요 ')  # 입력값 보다 정답값이 크다면
+
