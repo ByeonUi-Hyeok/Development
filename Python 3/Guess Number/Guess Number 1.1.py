@@ -29,8 +29,10 @@ print(filename_hidden)   # 체크용
 # 2-2. 
 while True : 
     filename_userinput = input( '정답 값을 예측하세요' )
-    #filename_userint = int( filename_userinput )
-
+    #file1name_userint = int( filename_userinput )
+    # 숫자 미입력시 내용 추가
+    while not filename_userinput :
+        filename_userinput = input( '입력하지 않았습니다. 숫자를 입력하세요' )
 # 2-3. 범위 벗어나면 에러출력    
     if int(filename_userinput) < filename_start or int(filename_userinput) > filename_end : 
         print('범위를 벗어납니다.')
