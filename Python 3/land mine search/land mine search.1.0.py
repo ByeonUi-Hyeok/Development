@@ -2,6 +2,8 @@
 # ver 1.0
 # . = Not mine / * = mine
 # 지뢰 주변의 .이 지뢰 숫자를 출력
+# 오류가많아서 수정요망
+
 from pprint import pprint
 
 tmp = []
