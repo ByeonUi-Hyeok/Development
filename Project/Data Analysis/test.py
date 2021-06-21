@@ -171,7 +171,7 @@ for city in SO2DF_I.columns[1:]:
     print(globals()[f'{city}_df5'])
     
     globals()[f'{city}_df5'].sort_values( by = '날짜', ascending=False, inplace=True)
-
+    globals()[f'{city}_df5'].drop_duplicates() # 중복 행제거 모든열기준
     pppath    = f'{city}_df5'
     save_PATH = f'C:/Users/ad/Desktop/test/{pppath}'
     globals()[f'{city}_df5'].to_excel(save_PATH + '.xlsx', index=False)
