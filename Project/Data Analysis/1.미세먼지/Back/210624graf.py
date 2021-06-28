@@ -7,7 +7,6 @@ from bokeh.plotting import figure, show
 from bokeh.models import Select, CheckboxButtonGroup, ColumnDataSource, DataTable, TableColumn, WMTSTileSource, FactorRange, PanTool
 from bokeh.models import BoxZoomTool, PanTool, ResetTool
 from bokeh.layouts import row, column
-from bokeh import layouts
 from bokeh.resources import INLINE
 from bokeh.models import *
 from bokeh.plotting import *
@@ -39,6 +38,17 @@ for column in columns:
 # 최종파일 오픈 최종
 
 def make_graphs():
+    import pandas as pd 
+    import numpy as np
+    import bokeh
+    import webbrowser
+    from bokeh.io import output_notebook, show, save, output_notebook, curdoc, output_file
+    from bokeh.plotting import figure, show
+    from bokeh.models import Select, CheckboxButtonGroup, ColumnDataSource, DataTable, TableColumn, WMTSTileSource, FactorRange, PanTool
+    from bokeh.models import BoxZoomTool, PanTool, ResetTool
+    from bokeh.layouts import row, column
+    from bokeh.resources import INLINE
+    from bokeh.models import CheckboxButtonGroup
 
     columns = ['SEOUL', 'PUSAN', 'DEAGU', 'INCHEON', 'KWANG_JU', 'DAEJEON', 'ULSAN',
        'KYEONG_GI', 'KANGONE', 'CHUNG_BUK', 'CHUNG_NAM', 'JEON_BUK',
@@ -115,6 +125,7 @@ def make_graphs():
 make_graphs()
 
   
+
 layout_with_widgets_SEOUL = column(
                             column(row(SEOULap,SEOULp)),
                             row(column(SEOULdata_table)))
