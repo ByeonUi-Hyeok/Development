@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h2 class="my-3 border-bottom pb-2">경기도</h2>
+    <!-- <button type="button" class="btn1 btn-light">미세먼지</button>
+    <button type="button" class="btn2 btn-light">오존</button>
+    <button type="button" class="btn3 btn-light">Light</button> -->
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+          <input type="radio" name="options" id="option1"> 미세먼지
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option2"> 초미세먼지
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option3"> 전체 그래프
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option4"> 일주일간 예측
+        </label>
+        <div class="dropdown ml-auto">
+            <button class="btn btn-secondary dropdown-toggle ml-auto" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              지역
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" id="seoul" href="{% url 'pybo:seoul' %}" >서울특별시</a>
+              <a class="dropdown-item" id="busan" href="{% url 'pybo:busan' %}" >부산광역시</a>
+              <a class="dropdown-item" id="daegu" href="{% url 'pybo:daegu' %}">대구광역시</a>
+              <a class="dropdown-item" id="incheon" href="{% url 'pybo:incheon' %}">인천광역시</a>
+              <a class="dropdown-item" id="gwangju" href="{% url 'pybo:gwangju' %}">광주광역시</a>
+              <a class="dropdown-item" id="daejeon" href="{% url 'pybo:daejeon' %}">대전광역시</a>
+              <a class="dropdown-item" id="ulsan" href="{% url 'pybo:ulsan' %}">울산광역시</a>
+              <a class="dropdown-item" id="sejong" href="{% url 'pybo:sejong' %}">세종특별자치시</a>
+              <a class="dropdown-item" id="gyeonggi" href="{% url 'pybo:gyeonggi' %}">경기도</a>
+              <a class="dropdown-item" id="gangwon" href="{% url 'pybo:gangwon' %}">강원도	</a>
+              <a class="dropdown-item" id="chungbuk" href="{% url 'pybo:chungbuk'%}">충청북도</a>
+              <a class="dropdown-item" id="chungnam" href="{% url 'pybo:chungnam' %}">충청남도</a>
+              <a class="dropdown-item" id="jeonbuk" href="{% url 'pybo:jeonbuk' %}">전라북도</a>
+              <a class="dropdown-item" id="jeonnam" href="{% url 'pybo:jeonnam' %}">전라남도</a>
+              <a class="dropdown-item" id="gyeongbuk" href="{% url 'pybo:gyeongbuk' %}">경상북도</a>
+              <a class="dropdown-item" id="gyeongnam" href="{% url 'pybo:gyeongnam'%}">경상남도	</a>
+              <a class="dropdown-item" id="jeju" href="{% url 'pybo:jeju'%}">제주특별자치도	</a>
+            </div>
+        </div>
+      </div>
+    
+    <div class="p"> 
+    </div>
+
+        
+    
+    
+    
+</div>
+
+    <!-- <iframe src="./kernel_prewarm_starter.html" id="the_iframe" onload="calcHeight();" frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:auto; width:100%; min-height:300px;"></iframe> -->
+    <!-- <iframe src="" frameborder="100"></iframe> -->
+</div>
+</div> 
+
+      <!-- // $(document).on('click', '#option1', function(e){
+    //     console.log("check!!");
+	// 	<iframe src="./kernel_prewarm_starter.html" id="the_iframe" onload="calcHeight();" frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:auto; width:100%; min-height:300px;"></iframe>
+	// });
+    // $(document).on('click', '#option2', function(){
+	// 	<iframe src="./map.html" id="the_iframe" onload="calcHeight();" frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:auto; width:100%; min-height:300px;"></iframe>
+	// }); -->
+
+
+
+{% endblock %}
+{%block script %}
+<script type="text/javascript"> 
+    $(document).ready(function(){
+        $("#option1").click(function(){
+            console.log('jquery 실행')
+            $(".p").html('<iframe src="PM10/KYEONG_GIPM10.html" id="the_iframe" onload="calcHeight();" frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:auto; width:100%; min-height:450px;"></iframe>');
+        });
+    });
+    $(document).ready(function(){
+        $("#option2").click(function(){
+            console.log('jquery 실행')
+            $(".p").html('<iframe src="PM25/KYEONG_GIPM25.html" id="the_iframe" onload="calcHeight();" frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:auto; width:100%; min-height:450px;"></iframe>');
+        });
+    });
+    $(document).ready(function(){
+        $("#option3").click(function(){
+            console.log('jquery 실행')
+            $(".p").html('<iframe src="compare/KYEONG_GIcpa.html" id="the_iframe" onload="calcHeight();" frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:auto; width:100%; min-height:450px;"></iframe>');
+        });
+    });
+    $(document).ready(function(){
+        $("#option4").click(function(){
+            console.log('jquery 실행')
+            $(".p").html('<iframe src="predict/KYEONG_GIpred.html" id="the_iframe" onload="calcHeight();" frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:auto; width:100%; min-height:450px;"></iframe>');
+        });
+    });
+    $(function(){
+      $("#busan").click(function(){
+        location.href = "{% url 'pybo:busan' %}"
+      });
+    });
+    $(function(){
+      $("#seoul").click(function(){
+        location.href = "{% url 'pybo:seoul' %}"
+      });
+    });
+    $(function(){
+      $("#daegu").click(function(){
+        location.href = "{% url 'pybo:daegu' %}"
+      });
+    });
+    $(function(){
+      $("#incheon").click(function(){
+        location.href = "{% url 'pybo:incheon' %}"
+      });
+    });
+    $(function(){
+      $("#gwangju").click(function(){
+        location.href = "{% url 'pybo:gwangju' %}"
+      });
+    });
+    $(function(){
+      $("#daejeon").click(function(){
+        location.href = "{% url 'pybo:daejeon' %}"
+      });
+    });
+    $(function(){
+      $("#ulsan").click(function(){
+        location.href = "{% url 'pybo:ulsan' %}"
+      });
+    });
+    $(function(){
+      $("#sejong").click(function(){
+        location.href = "{% url 'pybo:sejong' %}"
+      });
+    });
+    $(function(){
+      $("#gyeonggi").click(function(){
+        location.href = "{% url 'pybo:gyeonggi' %}"
+      });
+    });
+    $(function(){
+      $("#gangwon").click(function(){
+        location.href = "{% url 'pybo:gangwon' %}"
+      });
+    });
+    $(function(){
+      $("#chungbuk").click(function(){
+        location.href = "{% url 'pybo:chungbuk'%}"
+      });
+    });
+    $(function(){
+      $("#chungnam").click(function(){
+        location.href = "{% url 'pybo:chungnam' %}"
+      });
+    });
+    $(function(){
+      $("#jeonbuk").click(function(){
+        location.href = "{% url 'pybo:jeonbuk' %}"
+      });
+    });
+    $(function(){
+      $("#jeonnam").click(function(){
+        location.href = "{% url 'pybo:jeonnam' %}"
+      });
+    });
+    $(function(){
+      $("#gyeongbuk").click(function(){
+        location.href = "{% url 'pybo:gyeongbuk' %}"
+      });
+    });
+    $(function(){
+      $("#gyeongnam").click(function(){
+        location.href = "{% url 'pybo:gyeongnam'%}"
+      });
+    });
+    $(function(){
+      $("#jeju").click(function(){
+        location.href = "{% url 'pybo:jeju'%}"
+      });
+    });
+    //<![CDATA[
+    function calcHeight(){
+     //find the height of the internal page
+    
+     var the_height=
+     document.getElementById('the_iframe').contentWindow.
+     document.body.scrollHeight;
+    
+     //change the height of the iframe
+     document.getElementById('the_iframe').height=
+     the_height;
+    
+     //document.getElementById('the_iframe').scrolling = "no";
+     document.getElementById('the_iframe').style.overflow = "hidden";
+    }
+    //
+</script>
+
+{% endblock %}
