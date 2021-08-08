@@ -1,0 +1,213 @@
+{% extends 'base2.html' %}
+
+{% load static %} 
+
+{% block content %}
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 align-items-left justify-content-left text-center">
+                <div class="col-lg-8 align-self-end">
+                    <h1 class="text-dark font-weight-bold"></h1>
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-dark-75 mb-5"></p>
+                    <a>Companion pets</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About-->
+    <section class="page-section bg-primary" id="1">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-12 text-center">    
+                    <p class="arrow">&#9660;</p>
+                    <hr class="divider" />
+                    <p class="text-white-75 mb-4" align="middle">
+                        <h2 class="text-white mt-0" id="sub">Data Analysis - status</h2>
+                    </p>    
+                </div>
+                <a class="btn btn-primary btn-xl" href="#1" id="num1">
+                    part.1
+                </a>
+                <div class="col-lg-12 text-center">
+                    <div class="row"> 
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <p class="text-white-75 mb-4">
+                                <p class="w1 justify-content-left text-center"> 1.1 지도로 보는 지역별 반려동물 등록 현황 </p>
+                                <iframe src="{% static 'ani_register.html' %}" width="650" height="600"></iframe>
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <p class="text-white"> 
+                                <P class="w2 align-items-left justify-content-left text-center">" <span>경기도권</span>이 제일 높고 그 뒤로 <span>서울</span>입니다. </P>
+                                <P class="w"> 뒤이어 <span>인천, 경남, 부산</span>지역에서 </P>
+                                <P class="w"> 엇비슷한 등록 수를 보이고 있습니다. "</P>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section bg-primary">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="row"> 
+                        <div class="align-items-left justify-content-left text-center">
+                            <p class="w1 align-items-left justify-content-left text-center"> 1.2 막대그래프로 보는 지역별 반려동물 등록 수 </p>
+                            <p class="text-white-75 ">
+                                <div class="bk-root" id="dffd6ba4-4435-4ad8-b430-a37839ec827e" data-root-id="17521"></div>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-white"> 
+                                <P class="w align-items-left justify-content-left text-center" id="w3"> 
+                                    "경기도에서 40만 이상의 반려동물이 등록되었음을 확인할 수 있습니다. "</P>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section bg-primary">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <div class="row"> 
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <p class="text-white-75 mb-4">
+                                <p class="w2 align-items-left justify-content-left text-center">&#9997;</p>
+                                <p class="w">" 2019년 <span class="sp1">'반려동물등록제'</span>가 의무화되면서 등록 추이의</p> 
+                                    <p class="w">급격한 상승이 보입니다. "</p>
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <p class="text-white-75 mb-4">
+                                <p class="w1">1.3 연도별 반려동물 등록 추이 </p>
+                                <div class="bk-root" id="0384dd4a-44ee-4543-a33c-753dc399a583" data-root-id="16849"></div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 2 -->
+    <section class="page-section bg-primary" id="2">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <a class="btn btn-primary btn-xl" href="#2" id="num2">
+                    part.2
+                </a>
+                <div class="col-lg-12 text-center">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <p class="text-white-75 mb-4">
+                                <p class="w1">2.1 연도별 동물 생산 및 판매업  </p>
+                                <img src="{% static 'assets/img/animal.png' %}" alt="My Image">
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <p class="text-white-75 mb-4">
+                                <p class="w3">" 최근들어 생산업은 전년도에 비해 더디게 증가하고 </p>
+                                <p class="w"> <span>판매업은 감소</span>하고 있습니다.</p>
+                                <p class="w"> 2020년 판매업체의 증가수를 보아 <span>판매업체가 폐업</span>하고 있다는 것을 예측할 수 있습니다. "</p> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 3 -->
+    <section class="page-section bg-primary">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-12 text-center">    
+                        <hr class="divider" />
+                        <p class="text-white-75 mb-4" align="middle">
+                            <h2 class="text-white mt-0" id="sub2">Data Analysis - funeral</h2>
+                        </p>    
+                    </div> 
+                <a class="btn btn-primary btn-xl" href="#3" id="num3">
+                    part.3
+                </a>
+                <div class="col-lg-10 text-center">
+                    <div class="row"> 
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <p class="text-white-75 mb-4">
+                                <p class="w1">3.1 연도별 반려동물 등록 추이 </p>
+                                <div class="bk-root" id="be2fce6b-e640-441b-9951-f59ec8a6b3c4" data-root-id="16189"></div>
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <p class="text-white-75 mb-4">
+                                <p class="w2">" 반려동물 장묘업을 찾는 사람이 증가함에 따라 </p>
+                                <p class="w"> <span>동물장묘업체</span> 또한 <span>증가</span>하고 있습니다. "</p> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section bg-primary" id="3">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <div class="row">
+                        <div>
+                            <p class="text-white-75 mb-4">
+                                <p class="w1">3.2 지도로 보는 장묘업 위치  </p>
+                                <iframe src="{% static 'fu.html' %}" width="650" height="600"></iframe>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-white-75 mb-4">
+                                <p class="w">" 주로 <span>경기도</span>와 <span class="sp">경상도</span>쪽에 많이 위치하고 있습니다. </p>
+                                <p class="w"> 그러나 아직 부족하며 </p>
+                                <p class="w4"> 동물을 많이 키우는 <span>서울, 인천, 부산</span> 지역에 추가적인 설치 필요성이 예측됩니다. "</p> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services-->
+    <section class="page-section" id="services">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-0">Our Services</h2>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="fas fa-check-square fa-3x"></i></div>
+                        <h3 class="h4 mb-2">Register</h3>
+                        <p class="text-muted mb-0">반려동물 등록 현황을 알 수 있습니다</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio-->
+    <!-- Call to action-->
+    <section class="page-section bg-dark text-white">
+        <div class="container px-4 px-lg-5 text-center">
+            <h2 class="mb-4">If you have any questions or comments, just contact us!</h2>
+            <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">contact us</a>
+        </div>
+    </section>
+    <!-- Contact-->
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+        <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright & copy ; 2021 - Company *4조*</div></div>
+    </footer>
+    {% include 'p5-2.html' %}
+    {% include 'p5-3.html' %}
+    {% include 'p4-2.html' %}
+{% endblock %}

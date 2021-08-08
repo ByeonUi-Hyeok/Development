@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% load static %} 
+
+{% block content %}
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 h-100">
+            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-8 align-self-end">
+                    <h1 class="text-dark font-weight-bold" id="text_1">Hello!</h1>
+                    <h1 class="text-white font-weight-bold" >Use the 'SERVICE' about pets</h1>
+                    <hr class="divider" />
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-dark-75 mb-5"></p>
+                    <a class="btn btn-primary btn-xl" href="#location" id="text_2">Map Service</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About-->
+    <!-- <section class="page-section bg-primary" id="location">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="text-white mt-0">Find out Where is the Hospital & Shelter</h2>
+                    <hr class="divider" />
+                    <p class="text-white-75 mb-4" align="middle">
+                        <iframe src="{% static 'map.html' %}" width="650" height="600" style= "border: 2px solid maroon;"></iframe>
+                    </p> -->
+    <section class="page-section bg-primary" id="location">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-12 text-center">
+                    
+                    <p>&#9660;</p>
+                    <hr class="divider" />
+                    <p class="text-white-75 mb-4" align="middle">
+                        <h2 class="text-white mt-0">Find out " Where is the Hospital & Shelter? "</h2>
+                        
+                        <iframe src="{% static 'map.html' %}" width="1100" height="1500" ></iframe>
+                    </p>
+                           
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services-->
+    <section class="page-section" id="services">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-0">Our Services</h2>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="fas fa-hospital fa-3x"></i></div>
+                        <h3 class="h4 mb-2">Hospital</h3>
+                        <p class="text-muted mb-0">동물병원 위치를 찾을 수 있습니다</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="fas fa-paw fa-3x"></i></div>
+                        <h3 class="h4 mb-2">Shelter</h3>
+                        <p class="text-muted mb-0">유기동물 보호소를 찾을 수 있습니다</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio-->
+    <!-- Call to action-->
+    <section class="page-section bg-dark text-white">
+        <div class="container px-4 px-lg-5 text-center">
+            <h2 class="mb-4">If you have any questions or comments, just contact us!</h2>
+            <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">contact us</a>
+        </div>
+    </section>
+    <!-- Contact-->
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+        <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright & copy ; 2021 - Company *4조*</div></div>
+    </footer>
+{% endblock %}
